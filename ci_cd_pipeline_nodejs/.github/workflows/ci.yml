@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run security scan (Trivy)
+      run: echo "Simulated Trivy Scan"
+
+    - name: Run code analysis (SonarQube)
+      run: echo "Simulated SonarQube Analysis"
+
+    - name: Run app
+      run: npm start
