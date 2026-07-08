@@ -1,0 +1,12 @@
+{
+  "name": "ci-cd-pipeline-demo",
+  "version": "1.0.0",
+  "description": "Node.js app demonstrating a full multi-stage CI/CD pipeline with GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js",
+    "lint": "echo 'Linting passed (no linter configured yet)' && exit 0"
+  },
+  "license": "MIT"
+}
